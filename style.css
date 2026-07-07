@@ -1,0 +1,192 @@
+:root {
+    --primary: #2c3e50;
+    --primary-light: #34495e;
+    --secondary: #e67e22;
+    --secondary-dark: #d35400;
+    --bg: #f5f6fa;
+    --text-dark: #2d3436;
+    --text-light: #ecf0f1;
+    --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--text-light);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.welcome-prompt {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.banking-container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.atm-screen {
+    width: 100%;
+    min-height: 220px;
+    background-color: #f1f2f6;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+    box-sizing: border-box;
+}
+
+#screen-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+#screen-msg {
+    font-size: 16px;
+    color: var(--primary-light);
+    margin-bottom: 20px;
+}
+
+#pin-display {
+    font-size: 32px;
+    letter-spacing: 15px;
+    border: none;
+    border-bottom: 3px solid var(--secondary);
+    background: transparent;
+    text-align: center;
+    width: 200px;
+    color: var(--primary);
+    font-family: monospace;
+    outline: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.atm-controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.operations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.op-btn {
+    background-color: var(--primary-light);
+    color: var(--text-light);
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.op-btn:hover {
+    background-color: var(--primary);
+}
+
+.grid-keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 320px;
+    width: 100%;
+}
+
+.key-btn {
+    background-color: #d1d8e0;
+    color: var(--primary);
+    border: none;
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 0px #b1b9c2;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.key-btn:hover {
+    background-color: #b1b9c2;
+}
+
+.key-btn:active {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.success-btn { background-color: #2ecc71 !important; color: #fff !important; box-shadow: 0 3px 0px #27ae60 !important; }
+.warn-btn { background-color: #f1c40f !important; color: #fff !important; box-shadow: 0 3px 0px #f39c12 !important; font-size: 14px !important; }
+.danger-btn { background-color: #e74c3c !important; color: #fff !important; }
+
+.key-1 { grid-area: 1 / 1; }
+.key-2 { grid-area: 1 / 2; }
+.key-3 { grid-area: 1 / 3; }
+.key-4 { grid-area: 2 / 1; }
+.key-5 { grid-area: 2 / 2; }
+.key-6 { grid-area: 2 / 3; }
+.key-7 { grid-area: 3 / 1; }
+.key-8 { grid-area: 3 / 2; }
+.key-9 { grid-area: 3 / 3; }
+.key-0 { grid-area: 4 / 2; }
+.key-clear { grid-area: 4 / 1; }
+.key-enter { grid-area: 4 / 3; }
+
+#amount-input {
+    width: 80%;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid var(--secondary);
+    margin-top: 15px;
+    text-align: center;
+    box-sizing: border-box;
+}

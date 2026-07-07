@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Capital - Digital Banking Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="brand">Quantum Capital</div>
+    </div>
+
+    <div class="welcome-prompt">Welcome to Quantum Capital Digital Branch. Please secure your access.</div>
+
+    <div class="banking-container">
+        
+        <div class="atm-screen">
+            <h2 id="screen-title">ACCESS SECURED GATEWAY</h2>
+            <p id="screen-msg">Please use the keypad to enter your 4-digit security PIN.</p>
+            <div id="input-container">
+                <input type="password" id="pin-display" maxlength="4" placeholder="••••" readonly>
+                <input type="number" id="amount-input" placeholder="0.00" class="hidden">
+            </div>
+        </div>
+
+        <div class="atm-controls">
+            
+            <div id="operations-menu" class="operations-grid hidden">
+                <button class="op-btn" onclick="checkBalance()">1. Check Balance</button>
+                <button class="op-btn" onclick="showWithdraw()">2. Withdraw Cash</button>
+                <button class="op-btn" onclick="showDeposit()">3. Deposit Cash</button>
+                <button class="op-btn danger-btn" onclick="exitATM()">4. End Session</button>
+            </div>
+
+            <div id="hardware-keypad" class="grid-keypad">
+                <button class="key-btn key-1" onclick="appendDigit(1)">1</button>
+                <button class="key-btn key-2" onclick="appendDigit(2)">2</button>
+                <button class="key-btn key-3" onclick="appendDigit(3)">3</button>
+                <button class="key-btn key-4" onclick="appendDigit(4)">4</button>
+                <button class="key-btn key-5" onclick="appendDigit(5)">5</button>
+                <button class="key-btn key-6" onclick="appendDigit(6)">6</button>
+                <button class="key-btn key-7" onclick="appendDigit(7)">7</button>
+                <button class="key-btn key-8" onclick="appendDigit(8)">8</button>
+                <button class="key-btn key-9" onclick="appendDigit(9)">9</button>
+                <button class="key-btn key-clear warn-btn" onclick="clearDisplay()">CLEAR</button>
+                <button class="key-btn key-0" onclick="appendDigit(0)">0</button>
+                <button class="key-btn key-enter success-btn" onclick="submitEntry()">ENTER</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
